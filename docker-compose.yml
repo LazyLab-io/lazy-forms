@@ -1,0 +1,52 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: ./apps/api/Dockerfile
+      target: dev
+      args:
+        - APP_NAME=api
+#    note: - for starting up and running container
+#    command: tail -f /dev/null
+#    note: - no node reload on code change
+#    command: pnpm --filter api run
+#    note: - for running dev to see live changes
+    command: pnpm --filter api run dev
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./apps/api:/app/apps/api
+      - /app/node_modules
+      - /app/apps/api/node_modules
+    networks:
+      - app-network
+
+  reg-form:
+    build:
+      context: .
+      dockerfile: ./apps/reg-form/Dockerfile
+      target: dev
+      args:
+        - APP_NAME=reg-form
+    #    note: - for starting up and running container
+    #    command: tail -f /dev/null
+    #    note: - no node reload on code change
+    #    command: pnpm --filter api run
+    #    note: - for running dev to see live changes
+    command: pnpm --filter reg-form run dev
+    ports:
+      - "3002:3002"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./apps/reg-form:/app/apps/reg-form
+      - /app/node_modules
+      - /app/apps/reg-form/node_modules
+    networks:
+      - app-network
+  # Docker shared network definition
+networks:
+  app-network:
+    driver: bridge

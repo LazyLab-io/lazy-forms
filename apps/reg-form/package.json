@@ -1,5 +1,5 @@
 {
-  "name": "api",
+  "name": "reg-form",
   "version": "1.0.0",
   "type": "module",
   "description": "",
@@ -16,7 +16,8 @@
   "packageManager": "pnpm@10.13.1",
   "dependencies": {
     "fastify": "^5.4.0",
-    "fastify-plugin": "^5.0.1"
+    "fastify-plugin": "^5.0.1",
+    "zod": "^3.25.76"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

@@ -1,10 +1,11 @@
 {
-  "name": "monorepo_template",
+  "name": "lazy-forms",
   "private": true,
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "git config core.hooksPath .husky/_",
     "build": "turbo run build",
+    "start": "turbo run start",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
