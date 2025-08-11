@@ -57,6 +57,9 @@ importers:
 
   apps/reg-form:
     dependencies:
+      '@repo/test-package':
+        specifier: workspace:*
+        version: link:../../packages/test-package
       fastify:
         specifier: ^5.4.0
         version: 5.4.0
@@ -70,9 +73,6 @@ importers:
       '@repo/eslint-config':
         specifier: workspace:*
         version: link:../../packages/eslint-config
-      '@repo/test-package':
-        specifier: workspace:*
-        version: link:../../packages/test-package
       '@repo/typescript-config':
         specifier: workspace:*
         version: link:../../packages/typescript-config

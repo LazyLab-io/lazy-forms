@@ -62,6 +62,7 @@ COPY --from=pruner --chown=nodejs:nodejs /app/out/pnpm-workspace.yaml .
 # Install ONLY production dependencies.
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --frozen-lockfile --ignore-scripts
 # Copy the built application code from the builder stage.
+COPY --from=builder --chown=nodejs:nodejs /app/apps/${APP_NAME}/node_modules/@repo/test-package/dist ./apps/${APP_NAME}/node_modules/@repo/test-package/dist
 COPY --from=builder --chown=nodejs:nodejs /app/apps/${APP_NAME}/dist ./apps/${APP_NAME}/dist
 # Activate the new user created above
 USER nodejs
