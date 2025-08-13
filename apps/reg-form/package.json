@@ -15,10 +15,10 @@
   "license": "ISC",
   "packageManager": "pnpm@10.13.1",
   "dependencies": {
+    "@repo/test-package": "workspace:*",
+    "@repo/env-loader": "workspace:*",
     "fastify": "^5.4.0",
-    "fastify-plugin": "^5.0.1",
-    "zod": "^3.25.76",
-    "@repo/test-package": "workspace:*"
+    "fastify-plugin": "^5.0.1"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

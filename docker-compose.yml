@@ -37,9 +37,11 @@ services:
     #    note: - for running dev to see live changes
     command: pnpm --filter reg-form run dev
     ports:
-      - "3002:3002"
+      - "3100:3100"
     environment:
       - NODE_ENV=development
+      - PORT=3100
+      - DB_URL=postgresql://user:secret@localhost:5432/mydb
     volumes:
       - ./apps/reg-form:/app/apps/reg-form
       - /app/node_modules
