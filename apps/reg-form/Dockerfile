@@ -41,6 +41,7 @@ FROM installer AS builder
 WORKDIR /app
 ARG APP_NAME
 COPY --from=pruner /app/out/full/ .
+RUN pnpm run db:generate --filter ${APP_NAME}
 RUN pnpm run build --filter ${APP_NAME}
 
 # ==============================================================================
@@ -81,6 +82,7 @@ FROM installer AS dev
 WORKDIR /app
 ARG APP_NAME
 COPY --from=pruner /app/out/full/ .
+RUN pnpm run db:generate --filter ${APP_NAME}
 RUN pnpm run build --filter=${APP_NAME}^...
 # No need to start the process here, better from docker compose file in command key to start dev script
 #CMD ["pnpm", "--filter", "${APP_NAME}", "run", "start"]

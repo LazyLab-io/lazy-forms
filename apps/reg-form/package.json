@@ -8,15 +8,20 @@
     "build": "tsc",
     "start": "node dist/app.js",
     "dev": "tsx watch src/app.ts",
-    "lint": "eslint . --max-warnings 0"
+    "lint": "eslint . --max-warnings 0",
+    "db:generate": "npx prisma generate",
+    "db:migrate:dev": "npx prisma migrate dev",
+    "db:migrate:prod": "npx prisma migrate deploy",
+    "db:migrate:push": "npx prisma db push"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.13.1",
   "dependencies": {
-    "@repo/test-package": "workspace:*",
+    "@prisma/client": "6.14.0",
     "@repo/env-loader": "workspace:*",
+    "@repo/test-package": "workspace:*",
     "fastify": "^5.4.0",
     "fastify-plugin": "^5.0.1"
   },
@@ -25,6 +30,7 @@
     "@repo/typescript-config": "workspace:*",
     "@types/node": "^24.2.1",
     "eslint": "^9.31.0",
+    "prisma": "^6.14.0",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3"
   }

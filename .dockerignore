@@ -22,7 +22,10 @@ pnpm-debug.log*
 .env.*
 !.env.example
 
- Project files
+# Project files
 .github
 .husky
 .idea
+
+# ORM - Prisma
+**/generated

@@ -1,1 +1,1 @@
-export const banner: string = "This is test package banner";
+export const banner: string = "This is a banner.";
