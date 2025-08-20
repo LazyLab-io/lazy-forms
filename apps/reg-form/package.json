@@ -9,6 +9,7 @@
     "start": "node dist/app.js",
     "dev": "tsx watch src/app.ts",
     "lint": "eslint . --max-warnings 0",
+    "check-types": "tsc --noEmit",
     "db:generate": "npx prisma generate",
     "db:migrate:dev": "npx prisma migrate dev",
     "db:migrate:prod": "npx prisma migrate deploy",
@@ -23,7 +24,8 @@
     "@repo/env-loader": "workspace:*",
     "@repo/test-package": "workspace:*",
     "fastify": "^5.4.0",
-    "fastify-plugin": "^5.0.1"
+    "fastify-plugin": "^5.0.1",
+    "@prisma/local/client": "file:./generated/prisma"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

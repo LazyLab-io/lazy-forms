@@ -5,8 +5,6 @@
     "rootDir": "src",
     "types": ["node"],
     "verbatimModuleSyntax": true,
-    "baseUrl": ".",
-    "paths": {"@prisma/local/client": ["generated/prisma/client"]}
   },
   "include": ["src"],
   "exclude": ["node_modules", "dist", "test", "**/*.test.ts"]
