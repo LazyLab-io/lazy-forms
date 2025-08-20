@@ -1,11 +1,5 @@
 import { PrismaClient } from "@prisma/local/client";
 
-const prisma = new PrismaClient();
-export async function main() {
-  const allUsers = await prisma.user.findMany();
-  console.log(allUsers);
-}
-
 export type User = {
   email: string;
   firstName: string;
@@ -13,6 +7,27 @@ export type User = {
   password: string;
 };
 
+const prisma = new PrismaClient();
+
+export async function findAllUsers() {
+  const users = await prisma.user.findMany();
+  return users;
+}
+
+export async function findUserById(id: number) {
+  const user = await prisma.user.findUnique({ where: { id: id } });
+  return user;
+}
+
+export async function updateUser(id: number, userData: object) {
+  const user = await prisma.user.update({ where: { id: id }, data: userData });
+  return user;
+}
+
+export async function deleteUser(id: number) {
+  const user = await prisma.user.delete({ where: { id: id } });
+  return user;
+}
 export async function createUser(user: User) {
   await prisma.user.create({
     data: {
