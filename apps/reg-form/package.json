@@ -24,8 +24,7 @@
     "@repo/env-loader": "workspace:*",
     "@repo/test-package": "workspace:*",
     "fastify": "^5.4.0",
-    "fastify-plugin": "^5.0.1",
-    "@prisma/local/client": "file:./generated/prisma"
+    "fastify-plugin": "^5.0.1"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",

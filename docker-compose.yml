@@ -70,7 +70,7 @@ services:
       - ./apps/reg-form:/app/apps/reg-form
       - /app/node_modules
       - /app/apps/reg-form/node_modules
-      - /app/apps/reg-form/generated
+      - /app/apps/reg-form/src/generated
     networks:
       - app-network
   # Docker shared network definition
