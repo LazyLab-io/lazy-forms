@@ -1,4 +1,4 @@
-import { PrismaClient } from "./generated/client/client.js";
+import { PrismaClient } from "../generated/client/client.js";
 
 export type User = {
   email: string;

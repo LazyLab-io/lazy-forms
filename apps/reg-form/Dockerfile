@@ -65,6 +65,7 @@ RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --frozen-l
 # Copy the built application code from the builder stage and all related packages
 #COPY --from=builder --chown=nodejs:nodejs /app/apps/${APP_NAME}/node_modules/@repo/test-package/dist ./apps/${APP_NAME}/node_modules/@repo/test-package/dist
 COPY --from=builder --chown=nodejs:nodejs /app/packages ./packages
+COPY --from=builder --chown=nodejs:nodejs /app/apps/${APP_NAME}/generated ./apps/${APP_NAME}/generated
 COPY --from=builder --chown=nodejs:nodejs /app/apps/${APP_NAME}/dist ./apps/${APP_NAME}/dist
 # Activate the new user created above
 USER nodejs
