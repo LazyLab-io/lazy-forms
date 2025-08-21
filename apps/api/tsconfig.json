@@ -1,14 +1,11 @@
 {
-  "extends": "@repo/typescript-config/base.js",
+  "extends": "@repo/typescript-config/node-lib.json",
   "compilerOptions": {
-    "outDir": "./dist",
-    "rootDir": "./src"
+    "outDir": "dist",
+    "rootDir": "src",
+    "types": ["node"],
+    "verbatimModuleSyntax": true
   },
-  "include": [
-    "src/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
-  ]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "test", "**/*.test.ts"]
 }

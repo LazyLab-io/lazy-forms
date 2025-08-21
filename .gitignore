@@ -27,6 +27,8 @@ out/
 build
 dist
 
+#Prisma
+generated/prisma
 
 # Debug
 npm-debug.log*
@@ -38,3 +40,4 @@ yarn-error.log*
 *.pem
 .idea
 .vscode
+.editorconfig

@@ -1,11 +1,13 @@
 {
   "name": "api",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "build": "tsc",
-    "dev": "node dist/app.js",
+    "start": "node dist/app.js",
+    "dev": "tsx watch src/app.ts",
     "lint": "eslint . --max-warnings 0"
   },
   "keywords": [],
@@ -19,8 +21,9 @@
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "^24.1.0",
+    "@types/node": "^20.19.10",
     "eslint": "^9.31.0",
+    "tsx": "^4.20.3",
     "typescript": "^5.8.3"
   }
 }
