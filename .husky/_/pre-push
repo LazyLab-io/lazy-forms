@@ -18,6 +18,7 @@ if ! echo "$current_branch" | grep -Eq "$valid_branch_regex"; then
   echo "  - feature/<description>"
   echo "  - bugfix/<description>"
   echo "  - hotfix/<description>"
+  echo "  - chore/<description>"
   echo "  - release/vX.Y.Z (e.g., release/1.2.3 or release/v1.2.3)"
   echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
   exit 1
