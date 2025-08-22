@@ -29,3 +29,6 @@ pnpm-debug.log*
 
 # ORM - Prisma
 **/generated
+
+# AWS Infra
+**/infrastructure
