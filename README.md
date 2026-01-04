@@ -1,5 +1,3 @@
-
-
 # LazyLab Main Template
 
 **Testing ground for building end-to-end APIs and applications on AWS and Next.js**  
@@ -11,11 +9,11 @@ _A full-stack TypeScript monorepo scaffold for rapid, modular project developmen
 
 This repository serves as a **production-ready monorepo template** that integrates:
 
-- **Turborepo** for build orchestration and task caching  
-- **Fastify + Prisma** backend for performant API development  
-- **Next.js 15 (App Router)** frontend with MUI v7 for modern UI  
-- **AWS CDK** infrastructure as code for cloud deployments  
-- **PNPM Workspaces** for shared package management  
+- **Turborepo** for build orchestration and task caching
+- **Fastify + Prisma** backend for performant API development
+- **Next.js 15 (App Router)** frontend with MUI v7 for modern UI
+- **AWS CDK** infrastructure as code for cloud deployments
+- **PNPM Workspaces** for shared package management
 - **Type-safe shared packages** (`env-loader`, `eslint-config`, `typescript-config`, etc.)
 
 Everything is written in **TypeScript**, designed to scale from local development to AWS-hosted deployments.
@@ -44,7 +42,7 @@ Everything is written in **TypeScript**, designed to scale from local developmen
 ├── turbo.json           # Turborepo task configuration
 ├── pnpm-workspace.yaml  # Workspace definitions
 └── package.json         # Root dependencies and scripts
-````
+```
 
 ---
 
@@ -142,9 +140,9 @@ The `infrastructure` directory defines IaC using the AWS CDK.
 
 Main libraries:
 
-* `aws-cdk-lib`
-* `cdk-nag` (security checks)
-* `constructs`
+- `aws-cdk-lib`
+- `cdk-nag` (security checks)
+- `constructs`
 
 To deploy infrastructure (example):
 
@@ -175,13 +173,13 @@ pnpm cdk deploy
 
 ## 🔒 Code Quality & Standards
 
-* **Linting:** Centralized ESLint config (`@repo/eslint-config`)
-* **Formatting:** Prettier integrated
-* **Git Hooks:** Managed via [Husky](https://typicode.github.io/husky)
+- **Linting:** Centralized ESLint config (`@repo/eslint-config`)
+- **Formatting:** Prettier integrated
+- **Git Hooks:** Managed via [Husky](https://typicode.github.io/husky)
+  - Pre-commit: lint + format check
+  - Pre-push: branch name validation (`feature/`, `fix/`, etc.)
 
-  * Pre-commit: lint + format check
-  * Pre-push: branch name validation (`feature/`, `fix/`, etc.)
-* **Conventional Commits:** Enforced by `commitlint.config.js`
+- **Conventional Commits:** Enforced by `commitlint.config.js`
 
 ---
 
@@ -202,8 +200,8 @@ pnpm cdk deploy
 
 You can extend this template with your preferred test frameworks:
 
-* Unit testing via **Vitest** or **Jest**
-* E2E testing via **Playwright** or **Cypress**
+- Unit testing via **Vitest** or **Jest**
+- E2E testing via **Playwright** or **Cypress**
 
 Example setup commands (to be added later):
 
@@ -215,10 +213,10 @@ pnpm add -D vitest @vitest/ui @testing-library/react
 
 ## 📦 Deployment Notes
 
-* The backend (`apps/reg-form`) and frontend (`apps/reg-form-ui`) are both containerized.
-* Deployments are intended for AWS ECS/Fargate via CDK.
-* The `docker:push` script can push images to AWS ECR.
-* Infrastructure stack handles networking, ECS tasks, and storage.
+- The backend (`apps/reg-form`) and frontend (`apps/reg-form-ui`) are both containerized.
+- Deployments are intended for AWS ECS/Fargate via CDK.
+- The `docker:push` script can push images to AWS ECR.
+- Infrastructure stack handles networking, ECS tasks, and storage.
 
 ---
 
@@ -234,10 +232,10 @@ pnpm add -D vitest @vitest/ui @testing-library/react
 
 ## 🧭 Future Improvements
 
-* CI/CD with GitHub Actions
-* Automated CDK deployment to AWS environments
-* Integration testing workflows
-* Expanded UI component library (`@repo/ui`)
+- CI/CD with GitHub Actions
+- Automated CDK deployment to AWS environments
+- Integration testing workflows
+- Expanded UI component library (`@repo/ui`)
 
 ---
 
@@ -248,5 +246,4 @@ You are free to use, modify, and distribute it under the same license.
 
 ---
 
-> *Maintained by the LazyLab-io team. Built for clarity, speed, and scalability.*
-
+> _Maintained by the LazyLab-io team. Built for clarity, speed, and scalability._
